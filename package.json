@@ -1,0 +1,31 @@
+{
+  "name": "gamut",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "build": "turbo run build",
+    "dev": "turbo dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,js,cjs}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@gamut/eslint-config": "workspace:*",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.7",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-prisma": "^4.12.0",
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@8.1.1"
+}

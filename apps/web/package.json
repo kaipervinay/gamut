@@ -1,0 +1,29 @@
+{
+  "name": "@gamut/web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next .turbo node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md,js,cjs}\""
+  },
+  "dependencies": {
+    "@gamut/ui": "workspace:*",
+    "next": "^13.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@gamut/eslint-config": "workspace:*",
+    "@gamut/tsconfig": "workspace:*",
+    "@types/node": "^17.0.45",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "8.38.0",
+    "typescript": "^4.9.5"
+  }
+}
