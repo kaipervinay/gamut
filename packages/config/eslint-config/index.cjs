@@ -12,5 +12,6 @@ module.exports = {
   rules: {
     "@next/next/no-html-link-for-pages": "off",
     "no-console": "error",
+    "unicorn/prevent-abbreviations": "off",
   },
 };

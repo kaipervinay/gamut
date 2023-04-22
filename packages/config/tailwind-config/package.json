@@ -4,12 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "files": [
-    "index.js",
-    "postcss.js"
+    "index.ts"
   ],
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.1",
+    "tailwindcss-animate": "^1.0.5"
   }
 }

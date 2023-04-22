@@ -1,1 +1,3 @@
-export * from "./primitives";
+import "./styles.css";
+
+export * from "./components";

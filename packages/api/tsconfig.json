@@ -1,4 +1,4 @@
 {
   "extends": "@gamut/tsconfig/base.json",
-  "include": ["src", "index.ts", "transformer.ts"]
+  "include": ["src", "index.ts"]
 }

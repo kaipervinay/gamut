@@ -1,24 +1,42 @@
 {
   "name": "@gamut/ui",
   "version": "0.0.1",
-  "main": "./src/index.tsx",
-  "types": "./src/index.tsx",
   "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist",
+    "./styles.css": "./dist/index.css"
+  },
   "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
     "format": "prettier --write \"**/*.{ts,tsx,md,js,cjs}\"",
     "clean": "rm -rf node_modules",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "devDependencies": {
     "@gamut/eslint-config": "workspace:*",
+    "@gamut/tailwind-config": "workspace:*",
     "@gamut/tsconfig": "workspace:*",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.14",
     "eslint": "8.39.0",
+    "postcss": "^8.4.23",
     "react": "^18.2.0",
+    "tailwindcss": "^3.3.1",
+    "tailwindcss-animate": "^1.0.5",
+    "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "react-dom": "^18.2.0"
+    "clsx": "^1.2.1",
+    "lucide-react": "^0.171.0",
+    "react-aria": "^3.24.0",
+    "react-dom": "^18.2.0",
+    "tailwind-variants": "^0.1.3"
   }
 }

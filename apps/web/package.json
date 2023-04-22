@@ -16,6 +16,7 @@
     "@clerk/nextjs": "^4.16.4",
     "@gamut/api": "workspace:*",
     "@gamut/db": "workspace:*",
+    "@gamut/ui": "workspace:*",
     "@gamut/tailwind-config": "workspace:*",
     "@tanstack/react-query": "^4.29.3",
     "@tanstack/react-query-devtools": "^4.29.3",
@@ -34,8 +35,11 @@
     "@types/node": "^18.15.13",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.14",
     "dotenv-cli": "^7.2.1",
     "eslint": "8.39.0",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.1",
     "typescript": "^5.0.4"
   }
 }
