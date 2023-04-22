@@ -12,11 +12,11 @@
   "devDependencies": {
     "@gamut/eslint-config": "workspace:*",
     "@gamut/tsconfig": "workspace:*",
-    "@types/react": "^18.0.33",
+    "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
-    "eslint": "8.38.0",
+    "eslint": "8.39.0",
     "react": "^18.2.0",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "react-dom": "^18.2.0"

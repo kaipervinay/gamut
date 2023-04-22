@@ -13,29 +13,29 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,js,cjs}\""
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.16.2",
-    "@gamut/api": "*",
-    "@gamut/db": "*",
-    "@gamut/tailwind-config": "*",
+    "@clerk/nextjs": "^4.16.4",
+    "@gamut/api": "workspace:*",
+    "@gamut/db": "workspace:*",
+    "@gamut/tailwind-config": "workspace:*",
     "@tanstack/react-query": "^4.29.3",
     "@tanstack/react-query-devtools": "^4.29.3",
-    "@trpc/client": "^10.20.0",
-    "@trpc/next": "^10.20.0",
-    "@trpc/react-query": "^10.20.0",
-    "@trpc/server": "^10.20.0",
-    "next": "^13.3.0",
+    "@trpc/client": "^10.21.1",
+    "@trpc/next": "^10.21.1",
+    "@trpc/react-query": "^10.21.1",
+    "@trpc/server": "^10.21.1",
+    "next": "^13.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "zod": "^3.18.0"
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@gamut/eslint-config": "workspace:*",
     "@gamut/tsconfig": "workspace:*",
-    "@types/node": "^17.0.45",
-    "@types/react": "^18.0.33",
+    "@types/node": "^18.15.13",
+    "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
     "dotenv-cli": "^7.2.1",
-    "eslint": "8.38.0",
-    "typescript": "^4.9.5"
+    "eslint": "8.39.0",
+    "typescript": "^5.0.4"
   }
 }

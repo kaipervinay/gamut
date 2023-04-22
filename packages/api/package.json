@@ -10,16 +10,16 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@gamut/db": "*",
-    "@trpc/client": "^10.20.0",
-    "@trpc/server": "^10.20.0",
-    "superjson": "^1.9.1",
-    "zod": "^3.18.0"
+    "@gamut/db": "workspace:*",
+    "@trpc/client": "^10.21.1",
+    "@trpc/server": "^10.21.1",
+    "superjson": "^1.12.3",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
-    "eslint": "^8.28.0",
-    "typescript": "^4.9.3",
     "@gamut/eslint-config": "workspace:*",
-    "@gamut/tsconfig": "workspace:*"
+    "@gamut/tsconfig": "workspace:*",
+    "eslint": "^8.39.0",
+    "typescript": "^5.0.4"
   }
 }
