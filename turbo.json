@@ -5,23 +5,37 @@
     "DATABASE_URL",
     "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
     "CLERK_SECRET_KEY",
-    "CI"
+    "CI",
+    "NEXT_PUBLIC_VERCEL_URL",
+    "NODE_ENV"
   ],
   "pipeline": {
+    "db-generate": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
+    "db-push": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["^db-generate"],
+      "cache": false
+    },
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "^db-generate"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "type-check": {
+      "dependsOn": ["^db-generate"],
+      "cache": false
     },
     "lint": {
       "outputs": []
     },
-    "dev": {
-      "cache": false
-    },
     "clean": {
       "cache": false
     },
-    "format": {
-    }
+    "format": {}
   }
 }

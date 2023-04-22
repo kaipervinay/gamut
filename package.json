@@ -9,9 +9,12 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "build": "turbo run build",
+    "db-generate": "turbo db-generate",
+    "db-push": "turbo db-push",
     "dev": "turbo dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md,js,cjs}\"",
+    "type-check": "turbo type-check",
     "prepare": "husky install"
   },
   "devDependencies": {
