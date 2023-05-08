@@ -1,9 +1,7 @@
 import React from "react";
 
-import "@gamut/ui/styles.css";
+import "@gamut/ui/style.css";
 
-import "./global.css";
-import { TrpcProvider } from "@/providers/trpc-provider";
 import { ClerkProvider } from "@clerk/nextjs/app-beta";
 
 export default function RootLayout({
@@ -17,10 +15,10 @@ export default function RootLayout({
         <title>Next.js 13 with Clerk</title>
       </head>
 
-      <ClerkProvider>
-        <TrpcProvider>
-          <body>{children}</body>
-        </TrpcProvider>
+      <ClerkProvider
+        publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || ""}
+      >
+        <body>{children}</body>
       </ClerkProvider>
     </html>
   );

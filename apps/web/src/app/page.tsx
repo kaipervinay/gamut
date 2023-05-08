@@ -1,12 +1,11 @@
-import { HeroSection } from "@/components/hero";
-import { User } from "@clerk/nextjs/api";
-import { currentUser } from "@clerk/nextjs/app-beta";
+import { auth } from "@clerk/nextjs/app-beta";
+import { HeroSection } from "@components/hero";
 
 export default async function IndexPage() {
-  const user: User | null = await currentUser();
+  const { userId } = auth();
   return (
     <div>
-      Hello {user?.firstName ?? "world"}!
+      Hello {userId ?? "world"}!
       <HeroSection />
     </div>
   );

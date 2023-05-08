@@ -6,8 +6,9 @@
     "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
     "CLERK_SECRET_KEY",
     "CI",
-    "NEXT_PUBLIC_VERCEL_URL",
-    "NODE_ENV"
+    "VERCEL_URL",
+    "NODE_ENV",
+    "PORT"
   ],
   "pipeline": {
     "db-generate": {
