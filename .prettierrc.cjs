@@ -12,7 +12,7 @@ module.exports = {
     require.resolve("prettier-plugin-tailwindcss"),
     require.resolve("prettier-plugin-prisma"),
   ],
-  tailwindConfig: "./packages/config/tailwind",
+  tailwindConfig: "./packages/config/tailwind-config/tailwind.config.js",
   importOrder: [
     "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
     "^(next/(.*)$)|^(next$)",

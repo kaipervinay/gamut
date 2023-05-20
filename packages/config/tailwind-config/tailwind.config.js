@@ -1,9 +1,14 @@
-import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-export default {
+/** @type {import('tailwindcss').Config} */
+const config = {
   darkMode: ["class"],
-  content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
+  content: [
+    // app content
+    `src/**/*.{js,ts,jsx,tsx}`,
+    // include packages if not transpiling
+    "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -49,9 +54,9 @@ export default {
         },
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
+        DEFAULT: `var(--radius)`,
+        lg: `calc(var(--radius) * 2)`,
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
@@ -74,4 +79,6 @@ export default {
   },
   // eslint-disable-next-line unicorn/prefer-module
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
+
+export default config;

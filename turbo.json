@@ -37,6 +37,7 @@
     "clean": {
       "cache": false
     },
-    "format": {}
+    "format": {},
+    "storybook": {}
   }
 }

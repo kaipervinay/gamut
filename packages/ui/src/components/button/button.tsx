@@ -1,9 +1,10 @@
 import React from "react";
 
+import { Slot } from "@radix-ui/react-slot";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const buttonVariants = tv({
-  base: "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
+  base: "inline-flex items-center justify-center rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
   variants: {
     variant: {
       default: "bg-primary text-primary-foreground hover:bg-primary/90",
@@ -29,13 +30,17 @@ const buttonVariants = tv({
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, className, ...props }, parentRef) => {
+  ({ variant, size, className, asChild = false, ...props }, parentRef) => {
+    const Comp = asChild ? Slot : "button";
+
     return (
-      <button
-        className={buttonVariants({ variant, size, className })}
+      <Comp
+        className={buttonVariants({ className, variant, size })}
         ref={parentRef}
         {...props}
       />

@@ -13,11 +13,11 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,js,cjs}\""
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.17.1",
+    "@clerk/nextjs": "^4.18.2",
     "@gamut/db": "workspace:*",
     "@gamut/tailwind-config": "workspace:*",
     "@gamut/ui": "workspace:*",
-    "next": "^13.4.1",
+    "next": "^13.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "zod": "^3.21.4"
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@gamut/eslint-config": "workspace:*",
     "@gamut/tsconfig": "workspace:*",
-    "@types/node": "^18.16.5",
+    "@types/node": "^18.16.13",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "autoprefixer": "^10.4.14",

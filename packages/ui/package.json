@@ -9,32 +9,49 @@
   "types": "./src/index.tsx",
   "exports": {
     ".": "./src",
-    "./style.css": "./src/style.css"
+    "./styles.css": "./src/global.css"
   },
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,md,js,cjs}\"",
     "clean": "rm -rf node_modules",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
     "@gamut/eslint-config": "workspace:*",
     "@gamut/tailwind-config": "workspace:*",
     "@gamut/tsconfig": "workspace:*",
+    "@storybook/addon-essentials": "^7.0.12",
+    "@storybook/addon-interactions": "^7.0.12",
+    "@storybook/addon-links": "^7.0.12",
+    "@storybook/addon-styling": "^1.0.8",
+    "@storybook/blocks": "^7.0.12",
+    "@storybook/react": "^7.0.12",
+    "@storybook/react-vite": "^7.0.12",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react-swc": "^3.0.0",
     "autoprefixer": "^10.4.14",
     "eslint": "8.39.0",
+    "eslint-plugin-storybook": "^0.6.12",
     "postcss": "^8.4.23",
-    "react": "^18.2.0",
-    "tailwindcss": "^3.3.2",
-    "tailwindcss-animate": "^1.0.5",
-    "typescript": "^5.0.4"
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.12",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.2"
   },
   "dependencies": {
-    "clsx": "^1.2.1",
+    "@radix-ui/react-slot": "^1.0.1",
     "lucide-react": "^0.171.0",
-    "react-aria": "^3.24.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-variants": "^0.1.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   }
 }

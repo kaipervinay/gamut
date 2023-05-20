@@ -1,8 +1,13 @@
-import React from "react";
+import { Inter } from "next/font/google";
 
-import "@gamut/ui/style.css";
+import "@gamut/ui/styles.css";
 
-import { ClerkProvider } from "@clerk/nextjs/app-beta";
+import { ClerkProvider } from "@clerk/nextjs";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -10,16 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <title>Next.js 13 with Clerk</title>
-      </head>
-
-      <ClerkProvider
-        publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || ""}
-      >
-        <body>{children}</body>
-      </ClerkProvider>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <head>
+          <title>Next.js 13 with Clerk</title>
+        </head>
+        <body className={inter.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }

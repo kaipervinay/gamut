@@ -1,7 +1,6 @@
-import baseConfig from "@gamut/tailwind-config/tailwind.config";
+import sharedConfig from "@gamut/tailwind-config/tailwind.config.js";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.tsx"],
-  presets: [baseConfig],
+  presets: [sharedConfig],
 };

@@ -1,11 +1,8 @@
 {
   "name": "@gamut/tailwind-config",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "tailwind.config.js",
   "license": "MIT",
-  "files": [
-    "index.ts"
-  ],
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
