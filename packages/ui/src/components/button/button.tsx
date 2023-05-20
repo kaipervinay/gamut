@@ -1,10 +1,11 @@
 import React from "react";
 
 import { Slot } from "@radix-ui/react-slot";
+import { Loader2 } from "lucide-react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const buttonVariants = tv({
-  base: "inline-flex items-center justify-center rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
+  base: "inline-flex gap-2 items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background active:translate-y-0.5",
   variants: {
     variant: {
       default: "bg-primary text-primary-foreground hover:bg-primary/90",
@@ -32,10 +33,26 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  rightIcon?: React.ReactNode;
+  leftIcon?: React.ReactNode;
+  isLoading?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, className, asChild = false, ...props }, parentRef) => {
+  (
+    {
+      variant,
+      size,
+      className,
+      children,
+      rightIcon,
+      leftIcon,
+      isLoading,
+      asChild = false,
+      ...props
+    },
+    parentRef,
+  ) => {
     const Comp = asChild ? Slot : "button";
 
     return (
@@ -43,7 +60,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={buttonVariants({ className, variant, size })}
         ref={parentRef}
         {...props}
-      />
+      >
+        {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+        {rightIcon}
+        {children}
+        {leftIcon}
+      </Comp>
     );
   },
 );

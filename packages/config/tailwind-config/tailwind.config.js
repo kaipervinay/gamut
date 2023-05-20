@@ -7,7 +7,7 @@ const config = {
     // app content
     `src/**/*.{js,ts,jsx,tsx}`,
     // include packages if not transpiling
-    "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
+    "../../packages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     container: {
@@ -54,9 +54,10 @@ const config = {
         },
       },
       borderRadius: {
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
         DEFAULT: `var(--radius)`,
-        lg: `calc(var(--radius) * 2)`,
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
